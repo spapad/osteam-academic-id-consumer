@@ -30,10 +30,10 @@ use Gr\Gov\Minedu\Osteam\App\Extract;
  * --input <file> το αρχείο εισόδου 
  * --amka <column#> η σειρά που εμφανίζεται στο csv η στήλη με των κωδικό ΑΜΚΑ
  */
-$options = getopt('', ['input:', 'amka:', 'line:', 'maxcheck:']);
+$options = getopt('', ['input:', 'output:', 'amka:', 'line:', 'maxcheck:']);
 
 $input_file = isset($options['input']) ? $options['input'] : null;
-$output_file = isset($options['output']) ? $options['output_file'] : 'out.csv';
+$output_file = isset($options['output']) ? $options['output'] : 'out.csv';
 $amka_column = isset($options['amka']) ? abs(intval($options['amka'])) : 0;
 $line = isset($options['line']) ? abs(intval($options['line'])) : 1;
 $maxcheck = isset($options['maxcheck']) ? abs(intval($options['maxcheck'])) : null;
