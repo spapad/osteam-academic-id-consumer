@@ -1,0 +1,12 @@
+<?php
+
+return [
+    'osteam_codebase' => __DIR__ . '/src',
+    'base_uri_student' => 'https://wso2.minedu.gov.gr/academicid',
+    'base_uri_query' => '',
+    'username' => 'username-for-endpoint',
+    'password' => 'password-for-endpoint',
+    'auth_header_student' => 'Bearer ...', // wso2 auth header 
+    'timeout' => 1, // number of seconds between web service calls
+    'NO_SAFE_CURL' => true
+];

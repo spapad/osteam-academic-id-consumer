@@ -1,0 +1,8 @@
+<?php
+
+return [
+    'username' => 'username-for-endpoint',
+    'password' => 'password-for-endpoint',
+    'secure_endpoint_username' => 'username-for-this-wrapper',
+    'secure_endpoint_password' => 'password-for-this-wrapper',
+];

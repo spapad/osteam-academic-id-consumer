@@ -1,0 +1,10 @@
+<?php
+
+return [
+    'base_uri' => 'https://wso2.minedu.gov.gr/academicid',
+    'raw_check_base_uri' => '',
+    'username' => 'username-for-endpoint',
+    'password' => 'password-for-endpoint',
+    'auth_header' => 'Bearer ...', // wso2 auth header 
+    'timeout' => 1, // number of seconds between web service calls
+];
