@@ -45,8 +45,8 @@ class BaseApp
     public static function coreResponseData($success)
     {
         return [
-            // 'success' => $success === true,
-            // 'timestamp' => date('c')
+            'success' => $success === true,
+            'timestamp' => date('c')
             // 'client' => 'php ' . getHostByName(getHostName())
         ];
     }
