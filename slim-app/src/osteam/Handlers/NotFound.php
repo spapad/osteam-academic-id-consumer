@@ -23,6 +23,8 @@ class NotFound extends AbstractHandler
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response)
     {
         return $response->withJson(array_merge(BaseApp::coreResponseData(false), [
+            'success' => false,
+            'timestamp' => date('c'),
             'message' => 'Not found'
         ]), 404);
     }

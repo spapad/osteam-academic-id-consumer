@@ -24,6 +24,8 @@ class Error extends AbstractError
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, \Exception $exception)
     {
         return $response->withJson(array_merge(BaseApp::coreResponseData(false), [
+            'success' => false,
+            'timestamp' => date('c'),
             'message' => 'An error occured',
             'in' => $exception->getMessage()
         ]), intval($code = $exception->getCode()) > 0 ? $code : null);

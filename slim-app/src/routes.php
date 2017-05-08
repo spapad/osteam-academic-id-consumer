@@ -18,7 +18,11 @@ $app->get('/testServiceStatus', '\Gr\Gov\Minedu\Osteam\Slim\App:testServiceStatu
 $app->any('/[{anythingelse}]', function ($request, $response, $args) {
     $this->logger->info("Void response, no action route was enabled");
     return $response->withJson([
+        'success' => false,
+        'timestamp' => date('c'),
         'message' => 'Your request is not valid',
-        'in' => var_export($args, true)
+        'in' => 'args: ' . (empty($args) ? '' : implode(', ', array_map(function ($v) {
+            return var_export($v, true);
+        }, $args)))
     ], 404);
 });
